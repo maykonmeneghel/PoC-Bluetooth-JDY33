@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F041084A2A296A8C0018CC11 /* PocBLEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04108492A296A8C0018CC11 /* PocBLEApp.swift */; };
-		F041084C2A296A8C0018CC11 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F041084B2A296A8C0018CC11 /* Persistence.swift */; };
 		F041084F2A296A8C0018CC11 /* PocBLE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F041084D2A296A8C0018CC11 /* PocBLE.xcdatamodeld */; };
 		F04108512A296A8C0018CC11 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04108502A296A8C0018CC11 /* ContentView.swift */; };
 		F04108532A296A8E0018CC11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F04108522A296A8E0018CC11 /* Assets.xcassets */; };
@@ -16,6 +15,7 @@
 		F04108612A296A8F0018CC11 /* PocBLETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04108602A296A8F0018CC11 /* PocBLETests.swift */; };
 		F041086B2A296A8F0018CC11 /* PocBLEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F041086A2A296A8F0018CC11 /* PocBLEUITests.swift */; };
 		F041086D2A296A8F0018CC11 /* PocBLEUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F041086C2A296A8F0018CC11 /* PocBLEUITestsLaunchTests.swift */; };
+		F04108B82A2981730018CC11 /* BluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04108B72A2981730018CC11 /* BluetoothService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 /* Begin PBXFileReference section */
 		F04108462A296A8C0018CC11 /* PocBLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocBLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F04108492A296A8C0018CC11 /* PocBLEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocBLEApp.swift; sourceTree = "<group>"; };
-		F041084B2A296A8C0018CC11 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		F041084E2A296A8C0018CC11 /* PocBLE.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PocBLE.xcdatamodel; sourceTree = "<group>"; };
 		F04108502A296A8C0018CC11 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F04108522A296A8E0018CC11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		F04108662A296A8F0018CC11 /* PocBLEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocBLEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F041086A2A296A8F0018CC11 /* PocBLEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocBLEUITests.swift; sourceTree = "<group>"; };
 		F041086C2A296A8F0018CC11 /* PocBLEUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocBLEUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F04108B72A2981730018CC11 /* BluetoothService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +99,9 @@
 		F04108482A296A8C0018CC11 /* PocBLE */ = {
 			isa = PBXGroup;
 			children = (
-				F04108492A296A8C0018CC11 /* PocBLEApp.swift */,
-				F041084B2A296A8C0018CC11 /* Persistence.swift */,
+				F04108B72A2981730018CC11 /* BluetoothService.swift */,
 				F04108502A296A8C0018CC11 /* ContentView.swift */,
+				F04108492A296A8C0018CC11 /* PocBLEApp.swift */,
 				F04108522A296A8E0018CC11 /* Assets.xcassets */,
 				F04108542A296A8E0018CC11 /* PocBLE.entitlements */,
 				F041084D2A296A8C0018CC11 /* PocBLE.xcdatamodeld */,
@@ -268,7 +268,7 @@
 				F041084F2A296A8C0018CC11 /* PocBLE.xcdatamodeld in Sources */,
 				F041084A2A296A8C0018CC11 /* PocBLEApp.swift in Sources */,
 				F04108512A296A8C0018CC11 /* ContentView.swift in Sources */,
-				F041084C2A296A8C0018CC11 /* Persistence.swift in Sources */,
+				F04108B82A2981730018CC11 /* BluetoothService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,8 +425,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PocBLE/Preview Content\"";
 				DEVELOPMENT_TEAM = 3D684SCS2D;
 				ENABLE_HARDENED_RUNTIME = YES;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Our app does not request this permission or utilize this functionality but it is included in our info.plist since our app utilizes the react-native-permissions library, which references this permission in its code.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -463,8 +465,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PocBLE/Preview Content\"";
 				DEVELOPMENT_TEAM = 3D684SCS2D;
 				ENABLE_HARDENED_RUNTIME = YES;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Our app does not request this permission or utilize this functionality but it is included in our info.plist since our app utilizes the react-native-permissions library, which references this permission in its code.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
