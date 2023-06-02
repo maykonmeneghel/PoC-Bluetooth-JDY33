@@ -10,26 +10,38 @@ struct ContentView: View {
     @State var isOpened: Bool = false
     @State private var timer: Timer?
     @State private var timeRemaining: Int = 30
+    @State var path = NavigationPath()
     
     // MARK: Body
     
     var body: some View {
-        VStack() {
-            Spacer()
-            if isConnected { openDoorView }
-            Spacer()
-            HStack(spacing: 16) {
-                indicatorView
-                connectionButtonView
+        NavigationStack(path: $path) {
+            VStack() {
+                Spacer()
+                if isConnected { openDoorView }
+                Spacer()
+                HStack(spacing: 16) {
+                    indicatorView
+                    connectionButtonView
+                }
+            }
+            .onChange(of: isConnected, perform: { newValue in
+                if newValue {
+                    bluetoothService.connect()
+                } else {
+                    bluetoothService.disconnect()
+                }
+            })
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: ConfigView(action: { text in
+                        message = text
+                    })) {
+                        Image(systemName: "gear")
+                    }
+                }
             }
         }
-        .onChange(of: isConnected, perform: { newValue in
-            if newValue {
-                bluetoothService.connect()
-            } else {
-                bluetoothService.disconnect()
-            }
-        })
     }
     
     // MARK: Views
@@ -58,7 +70,7 @@ struct ContentView: View {
     private var openDoorView: some View {
         VStack {
             Button {
-                bluetoothService.sendMessage("")
+                bluetoothService.sendMessage(message)
                 isOpened = true
                 startTimer()
             } label: {

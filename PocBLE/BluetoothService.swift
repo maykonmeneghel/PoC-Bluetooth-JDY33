@@ -59,7 +59,6 @@ class BluetoothService: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
         if peripheral.name == " IOS POCKET MARKET" {
             self.peripheral = peripheral
             self.peripheral?.delegate = self
-//            centralManager?.connect(self.peripheral!, options: nil)
         }
     }
     

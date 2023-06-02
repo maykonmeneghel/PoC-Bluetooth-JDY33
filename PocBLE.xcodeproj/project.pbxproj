@@ -16,6 +16,7 @@
 		F041086B2A296A8F0018CC11 /* PocBLEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F041086A2A296A8F0018CC11 /* PocBLEUITests.swift */; };
 		F041086D2A296A8F0018CC11 /* PocBLEUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F041086C2A296A8F0018CC11 /* PocBLEUITestsLaunchTests.swift */; };
 		F04108B82A2981730018CC11 /* BluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04108B72A2981730018CC11 /* BluetoothService.swift */; };
+		F04108BA2A298D1C0018CC11 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04108B92A298D1C0018CC11 /* ConfigView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		F041086A2A296A8F0018CC11 /* PocBLEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocBLEUITests.swift; sourceTree = "<group>"; };
 		F041086C2A296A8F0018CC11 /* PocBLEUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocBLEUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F04108B72A2981730018CC11 /* BluetoothService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothService.swift; sourceTree = "<group>"; };
+		F04108B92A298D1C0018CC11 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				F04108B72A2981730018CC11 /* BluetoothService.swift */,
+				F04108B92A298D1C0018CC11 /* ConfigView.swift */,
 				F04108502A296A8C0018CC11 /* ContentView.swift */,
 				F04108492A296A8C0018CC11 /* PocBLEApp.swift */,
 				F04108522A296A8E0018CC11 /* Assets.xcassets */,
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F041084F2A296A8C0018CC11 /* PocBLE.xcdatamodeld in Sources */,
+				F04108BA2A298D1C0018CC11 /* ConfigView.swift in Sources */,
 				F041084A2A296A8C0018CC11 /* PocBLEApp.swift in Sources */,
 				F04108512A296A8C0018CC11 /* ContentView.swift in Sources */,
 				F04108B82A2981730018CC11 /* BluetoothService.swift in Sources */,
