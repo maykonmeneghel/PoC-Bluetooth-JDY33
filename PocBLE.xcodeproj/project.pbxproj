@@ -1,0 +1,638 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F041084A2A296A8C0018CC11 /* PocBLEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04108492A296A8C0018CC11 /* PocBLEApp.swift */; };
+		F041084C2A296A8C0018CC11 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F041084B2A296A8C0018CC11 /* Persistence.swift */; };
+		F041084F2A296A8C0018CC11 /* PocBLE.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F041084D2A296A8C0018CC11 /* PocBLE.xcdatamodeld */; };
+		F04108512A296A8C0018CC11 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04108502A296A8C0018CC11 /* ContentView.swift */; };
+		F04108532A296A8E0018CC11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F04108522A296A8E0018CC11 /* Assets.xcassets */; };
+		F04108572A296A8E0018CC11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F04108562A296A8E0018CC11 /* Preview Assets.xcassets */; };
+		F04108612A296A8F0018CC11 /* PocBLETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04108602A296A8F0018CC11 /* PocBLETests.swift */; };
+		F041086B2A296A8F0018CC11 /* PocBLEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F041086A2A296A8F0018CC11 /* PocBLEUITests.swift */; };
+		F041086D2A296A8F0018CC11 /* PocBLEUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F041086C2A296A8F0018CC11 /* PocBLEUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F041085D2A296A8F0018CC11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F041083E2A296A8C0018CC11 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F04108452A296A8C0018CC11;
+			remoteInfo = PocBLE;
+		};
+		F04108672A296A8F0018CC11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F041083E2A296A8C0018CC11 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F04108452A296A8C0018CC11;
+			remoteInfo = PocBLE;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F04108462A296A8C0018CC11 /* PocBLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocBLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F04108492A296A8C0018CC11 /* PocBLEApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocBLEApp.swift; sourceTree = "<group>"; };
+		F041084B2A296A8C0018CC11 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		F041084E2A296A8C0018CC11 /* PocBLE.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PocBLE.xcdatamodel; sourceTree = "<group>"; };
+		F04108502A296A8C0018CC11 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F04108522A296A8E0018CC11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F04108542A296A8E0018CC11 /* PocBLE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PocBLE.entitlements; sourceTree = "<group>"; };
+		F04108562A296A8E0018CC11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F041085C2A296A8F0018CC11 /* PocBLETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocBLETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F04108602A296A8F0018CC11 /* PocBLETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocBLETests.swift; sourceTree = "<group>"; };
+		F04108662A296A8F0018CC11 /* PocBLEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocBLEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F041086A2A296A8F0018CC11 /* PocBLEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocBLEUITests.swift; sourceTree = "<group>"; };
+		F041086C2A296A8F0018CC11 /* PocBLEUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocBLEUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F04108432A296A8C0018CC11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F04108592A296A8F0018CC11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F04108632A296A8F0018CC11 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F041083D2A296A8C0018CC11 = {
+			isa = PBXGroup;
+			children = (
+				F04108482A296A8C0018CC11 /* PocBLE */,
+				F041085F2A296A8F0018CC11 /* PocBLETests */,
+				F04108692A296A8F0018CC11 /* PocBLEUITests */,
+				F04108472A296A8C0018CC11 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F04108472A296A8C0018CC11 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F04108462A296A8C0018CC11 /* PocBLE.app */,
+				F041085C2A296A8F0018CC11 /* PocBLETests.xctest */,
+				F04108662A296A8F0018CC11 /* PocBLEUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F04108482A296A8C0018CC11 /* PocBLE */ = {
+			isa = PBXGroup;
+			children = (
+				F04108492A296A8C0018CC11 /* PocBLEApp.swift */,
+				F041084B2A296A8C0018CC11 /* Persistence.swift */,
+				F04108502A296A8C0018CC11 /* ContentView.swift */,
+				F04108522A296A8E0018CC11 /* Assets.xcassets */,
+				F04108542A296A8E0018CC11 /* PocBLE.entitlements */,
+				F041084D2A296A8C0018CC11 /* PocBLE.xcdatamodeld */,
+				F04108552A296A8E0018CC11 /* Preview Content */,
+			);
+			path = PocBLE;
+			sourceTree = "<group>";
+		};
+		F04108552A296A8E0018CC11 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F04108562A296A8E0018CC11 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F041085F2A296A8F0018CC11 /* PocBLETests */ = {
+			isa = PBXGroup;
+			children = (
+				F04108602A296A8F0018CC11 /* PocBLETests.swift */,
+			);
+			path = PocBLETests;
+			sourceTree = "<group>";
+		};
+		F04108692A296A8F0018CC11 /* PocBLEUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F041086A2A296A8F0018CC11 /* PocBLEUITests.swift */,
+				F041086C2A296A8F0018CC11 /* PocBLEUITestsLaunchTests.swift */,
+			);
+			path = PocBLEUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F04108452A296A8C0018CC11 /* PocBLE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F04108702A296A8F0018CC11 /* Build configuration list for PBXNativeTarget "PocBLE" */;
+			buildPhases = (
+				F04108422A296A8C0018CC11 /* Sources */,
+				F04108432A296A8C0018CC11 /* Frameworks */,
+				F04108442A296A8C0018CC11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PocBLE;
+			productName = PocBLE;
+			productReference = F04108462A296A8C0018CC11 /* PocBLE.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F041085B2A296A8F0018CC11 /* PocBLETests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F04108732A296A8F0018CC11 /* Build configuration list for PBXNativeTarget "PocBLETests" */;
+			buildPhases = (
+				F04108582A296A8F0018CC11 /* Sources */,
+				F04108592A296A8F0018CC11 /* Frameworks */,
+				F041085A2A296A8F0018CC11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F041085E2A296A8F0018CC11 /* PBXTargetDependency */,
+			);
+			name = PocBLETests;
+			productName = PocBLETests;
+			productReference = F041085C2A296A8F0018CC11 /* PocBLETests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F04108652A296A8F0018CC11 /* PocBLEUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F04108762A296A8F0018CC11 /* Build configuration list for PBXNativeTarget "PocBLEUITests" */;
+			buildPhases = (
+				F04108622A296A8F0018CC11 /* Sources */,
+				F04108632A296A8F0018CC11 /* Frameworks */,
+				F04108642A296A8F0018CC11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F04108682A296A8F0018CC11 /* PBXTargetDependency */,
+			);
+			name = PocBLEUITests;
+			productName = PocBLEUITests;
+			productReference = F04108662A296A8F0018CC11 /* PocBLEUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F041083E2A296A8C0018CC11 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					F04108452A296A8C0018CC11 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					F041085B2A296A8F0018CC11 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = F04108452A296A8C0018CC11;
+					};
+					F04108652A296A8F0018CC11 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = F04108452A296A8C0018CC11;
+					};
+				};
+			};
+			buildConfigurationList = F04108412A296A8C0018CC11 /* Build configuration list for PBXProject "PocBLE" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F041083D2A296A8C0018CC11;
+			productRefGroup = F04108472A296A8C0018CC11 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F04108452A296A8C0018CC11 /* PocBLE */,
+				F041085B2A296A8F0018CC11 /* PocBLETests */,
+				F04108652A296A8F0018CC11 /* PocBLEUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F04108442A296A8C0018CC11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F04108572A296A8E0018CC11 /* Preview Assets.xcassets in Resources */,
+				F04108532A296A8E0018CC11 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F041085A2A296A8F0018CC11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F04108642A296A8F0018CC11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F04108422A296A8C0018CC11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F041084F2A296A8C0018CC11 /* PocBLE.xcdatamodeld in Sources */,
+				F041084A2A296A8C0018CC11 /* PocBLEApp.swift in Sources */,
+				F04108512A296A8C0018CC11 /* ContentView.swift in Sources */,
+				F041084C2A296A8C0018CC11 /* Persistence.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F04108582A296A8F0018CC11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F04108612A296A8F0018CC11 /* PocBLETests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F04108622A296A8F0018CC11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F041086B2A296A8F0018CC11 /* PocBLEUITests.swift in Sources */,
+				F041086D2A296A8F0018CC11 /* PocBLEUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F041085E2A296A8F0018CC11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F04108452A296A8C0018CC11 /* PocBLE */;
+			targetProxy = F041085D2A296A8F0018CC11 /* PBXContainerItemProxy */;
+		};
+		F04108682A296A8F0018CC11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F04108452A296A8C0018CC11 /* PocBLE */;
+			targetProxy = F04108672A296A8F0018CC11 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F041086E2A296A8F0018CC11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F041086F2A296A8F0018CC11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F04108712A296A8F0018CC11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PocBLE/PocBLE.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PocBLE/Preview Content\"";
+				DEVELOPMENT_TEAM = 3D684SCS2D;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maykonmeneghel.PocBLE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F04108722A296A8F0018CC11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PocBLE/PocBLE.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PocBLE/Preview Content\"";
+				DEVELOPMENT_TEAM = 3D684SCS2D;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maykonmeneghel.PocBLE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F04108742A296A8F0018CC11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3D684SCS2D;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maykonmeneghel.PocBLETests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocBLE.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PocBLE";
+			};
+			name = Debug;
+		};
+		F04108752A296A8F0018CC11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3D684SCS2D;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maykonmeneghel.PocBLETests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocBLE.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PocBLE";
+			};
+			name = Release;
+		};
+		F04108772A296A8F0018CC11 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3D684SCS2D;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maykonmeneghel.PocBLEUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PocBLE;
+			};
+			name = Debug;
+		};
+		F04108782A296A8F0018CC11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3D684SCS2D;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maykonmeneghel.PocBLEUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PocBLE;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F04108412A296A8C0018CC11 /* Build configuration list for PBXProject "PocBLE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F041086E2A296A8F0018CC11 /* Debug */,
+				F041086F2A296A8F0018CC11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F04108702A296A8F0018CC11 /* Build configuration list for PBXNativeTarget "PocBLE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F04108712A296A8F0018CC11 /* Debug */,
+				F04108722A296A8F0018CC11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F04108732A296A8F0018CC11 /* Build configuration list for PBXNativeTarget "PocBLETests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F04108742A296A8F0018CC11 /* Debug */,
+				F04108752A296A8F0018CC11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F04108762A296A8F0018CC11 /* Build configuration list for PBXNativeTarget "PocBLEUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F04108772A296A8F0018CC11 /* Debug */,
+				F04108782A296A8F0018CC11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F041084D2A296A8C0018CC11 /* PocBLE.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F041084E2A296A8C0018CC11 /* PocBLE.xcdatamodel */,
+			);
+			currentVersion = F041084E2A296A8C0018CC11 /* PocBLE.xcdatamodel */;
+			path = PocBLE.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F041083E2A296A8C0018CC11 /* Project object */;
+}
