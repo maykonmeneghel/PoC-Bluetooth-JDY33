@@ -12,6 +12,18 @@ class BluetoothService: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
         centralManager = CBCentralManager(delegate: self, queue: nil)
     }
     
+    func connect() {
+        guard let peripheral = peripheral else { return }
+        centralManager?.connect(peripheral, options: nil)
+        print("Bluetooth is connected..")
+    }
+    
+    func disconnect() {
+        guard let peripheral = peripheral else { return }
+        centralManager?.cancelPeripheralConnection(peripheral)
+        print("Bluetooth is disconnected..")
+    }
+    
     func startScanningDevices() {
         scannedDevices.removeAll()
         centralManager?.scanForPeripherals(withServices: nil)
@@ -47,7 +59,7 @@ class BluetoothService: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
         if peripheral.name == " IOS POCKET MARKET" {
             self.peripheral = peripheral
             self.peripheral?.delegate = self
-            centralManager?.connect(self.peripheral!, options: nil)
+//            centralManager?.connect(self.peripheral!, options: nil)
         }
     }
     
