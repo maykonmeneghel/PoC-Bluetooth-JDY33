@@ -1,90 +1,105 @@
-//
-//  ContentView.swift
-//  PocBLE
-//
-//  Created by Maykon Meneghel on 01/06/23.
-//
-
 import SwiftUI
-import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    
+    // MARK: Properties
+    
+    let bluetoothService = BluetoothService()
+    @State private var message: String = ""
+    @State var isConnected: Bool = false
+    @State var isOpened: Bool = false
+    @State private var timer: Timer?
+    @State private var timeRemaining: Int = 30
+    @State var path = NavigationPath()
+    
+    // MARK: Body
+    
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
-                    }
+        NavigationStack(path: $path) {
+            VStack() {
+                Spacer()
+                if isConnected { openDoorView }
+                Spacer()
+                HStack(spacing: 16) {
+                    indicatorView
+                    connectionButtonView
                 }
-                .onDelete(perform: deleteItems)
             }
+            .onChange(of: isConnected, perform: { newValue in
+                if newValue {
+                    bluetoothService.connect()
+                } else {
+                    bluetoothService.disconnect()
+                }
+            })
             .toolbar {
-#if os(iOS)
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-#endif
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                    NavigationLink(destination: ConfigView(action: { text in
+                        message = text
+                    })) {
+                        Image(systemName: "gear")
                     }
                 }
             }
-            Text("Select an item")
         }
     }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+    
+    // MARK: Views
+    
+    private var indicatorView: some View {
+        Image(systemName: "circle.fill")
+            .resizable()
+            .frame(width: 12, height: 12)
+            .foregroundColor(isConnected ? .green : .red)
+    }
+    
+    private var connectionButtonView: some View {
+        Button {
+            resetTimer()
+            isConnected.toggle()
+        } label: {
+            Text(isConnected ? "Disconnect" : "Connect")
+                .font(.body)
+                .foregroundColor(.primary)
+        }
+        .frame(width: 120, height: 40)
+        .background(.secondary)
+        .cornerRadius(20)
+    }
+    
+    private var openDoorView: some View {
+        VStack {
+            Button {
+                bluetoothService.sendMessage(message)
+                isOpened = true
+                startTimer()
+            } label: {
+                Image(systemName: isOpened ? "lock.open" : "lock")
+                    .resizable()
+                    .frame(width: isOpened ? 50 : 40, height: 55)
+            }
+            .disabled(timeRemaining < 30)
+            
+            if isOpened {
+                Text("\(timeRemaining)")
+                    .font(.body)
             }
         }
     }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+    
+    private func startTimer() {
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            if timeRemaining > 0 {
+                timeRemaining -= 1
+            } else {
+                resetTimer()
             }
         }
     }
-}
-
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    
+    private func resetTimer() {
+        timeRemaining = 30
+        isOpened = false
+        timer?.invalidate()
     }
 }
